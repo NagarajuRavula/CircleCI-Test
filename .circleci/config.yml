@@ -7,10 +7,10 @@ jobs:
     steps:
       - checkout
       - run: javac CircleCI.java
-     # - run: sudo docker login -u $DOCKER_USER -p $DOCKER_PASS
-     # - run: sudo docker build -t testapp .
-     # - run: sudo docker tag testapp $DOCKER_USER/$DOCKER_REPO:$CIRCLE_BUILD_NUM 
-     # - run: sudo docker push $DOCKER_USER/$DOCKER_REPO:$CIRCLE_BUILD_NUM
+      - run: sudo docker login -u nagarajuravula -p Nagaraju@1
+      - run: sudo docker build -t circleci-test .
+      - run: sudo docker tag circleci-test nagarajuravula/circleci-test:$CIRCLE_BUILD_NUM 
+      - run: sudo docker push nagarajuravula/circleci-test:$CIRCLE_BUILD_NUM
   
 
 
